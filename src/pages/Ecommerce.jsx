@@ -41,7 +41,11 @@ function Ecommerce() {
               </button>
               <p className="mt-3">
                 <span className="text-lg font-semibold">{item.amount}</span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                <span
+                  className={`text-sm text-${
+                    item.pcColor === "red-600" ? "[#d00]" : "green-600"
+                  } ml-2`}
+                >
                   {item.percentage}
                 </span>
               </p>

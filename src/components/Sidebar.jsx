@@ -10,9 +10,9 @@ import { links } from "../data/dummy";
 function Sidebar() {
   const { activeMenu, setActiveMenu, screenSize } = useStateContext();
   const activeLink =
-    "flex items-center gap-5 pl-3 pt-3 pb-2.5 rounded-lg text-[#fff] text-md m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-md m-2"; // text-white
   const normalLink =
-    "flex items-center gap-5 pl-3 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-[#000] hover:bg-light-gray m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {
@@ -47,9 +47,7 @@ function Sidebar() {
           <div className="mt-10 ">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 m-3 mt-4 uppercase" s>
-                  {item.title}
-                </p>
+                <p className="text-gray-400 m-3 mt-4 uppercase">{item.title}</p>
                 {item.links.map((link) => (
                   <NavLink
                     to={`/${link.name}`}
