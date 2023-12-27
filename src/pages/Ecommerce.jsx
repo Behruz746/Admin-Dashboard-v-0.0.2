@@ -11,7 +11,7 @@ function Ecommerce() {
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center border-[1px]">
           <div className="flex justify-between items-center">
-            <div className="bg-[blue] rounded-[8px] p-1">
+            <div className={`bg-[${currentColor}] rounded-[8px] p-1`}>
               <p className="font-bold text-gray-100">Earnings</p>
               <p className="text-2xl text-[#fff]">$63.448.78</p>
             </div>
@@ -19,7 +19,7 @@ function Ecommerce() {
           <div className="mt-6">
             <Button
               color="#fff"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
             />
@@ -30,7 +30,7 @@ function Ecommerce() {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl "
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl flex flex-col items-center"
             >
               <button
                 type="button"
@@ -89,7 +89,7 @@ function Ecommerce() {
               </div>
               <div className="mt-5 ">
                 <SparkLine
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id="line-sparkline"
                   type="Line"
                   height="80px"
@@ -101,7 +101,7 @@ function Ecommerce() {
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor="blue"
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />

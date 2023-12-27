@@ -3,10 +3,6 @@ import {
   GridComponent,
   ColumnsDirective,
   ColumnDirective,
-  Resize,
-  Sort,
-  ContextMenu,
-  Filter,
   Page,
   Inject,
   Search,
@@ -18,7 +14,7 @@ import { Header } from "../components/PathIndex";
 
 function Employees() {
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-[#fff] rounded-3xl">
+    <div className="m-2 md:m-10 p-2 md:p-10 mt-24 bg-[#fff] rounded-3xl">
       <Header category="Page" title="Employees" />
       <GridComponent
         dataSource={employeesData}

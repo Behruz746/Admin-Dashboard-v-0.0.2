@@ -14,16 +14,27 @@ import {
 import { useStateContext } from "../contexts/contextProvider";
 
 function AppRoot() {
-  const { activeMenu } = useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
 
   return (
-    <div className="flex relative dark:bg-main-dark-bg">
+    <div
+      className={`flex relative dark:bg-main-dark-bg ${
+        currentMode === "Dark" ? "dark" : "light"
+      }`}
+    >
       <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
-        <TooltipComponent position="TopCenter" content="Tooltip Content">
+        <TooltipComponent position="TopCenter" content="Settings">
           <button
             type="button"
-            className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-[#fff]"
-            style={{ backgroundColor: "blue", borderRadius: "50%" }}
+            className={`text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-[#fff]`}
+            style={{ backgroundColor: currentColor, borderRadius: "50%" }}
+            onClick={() => setThemeSettings(true)}
           >
             <FiSettings />
           </button>
@@ -51,6 +62,7 @@ function AppRoot() {
           <Navbar />
         </div>
 
+        {themeSettings && <ThemeSettings />}
         <>
           <Outlet />
         </>

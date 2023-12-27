@@ -8,9 +8,9 @@ import { useStateContext } from "../contexts/contextProvider";
 import { links } from "../data/dummy";
 
 function Sidebar() {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
-  const activeLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-md m-2"; // text-white
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext();
+  const activeLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-md m-2 bg-[${currentColor}] text-white`;
   const normalLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 

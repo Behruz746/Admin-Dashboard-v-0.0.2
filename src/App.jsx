@@ -34,7 +34,7 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         // this is Dashboard
-        { path: "/", index: true, element: <Ecommerce /> }, 
+        { path: "/", index: true, element: <Ecommerce /> },
         { path: "/ecommerce", element: <Ecommerce /> },
         // Pages
         { path: "/orders", element: <Orders /> },
