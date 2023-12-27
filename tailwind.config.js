@@ -39,8 +39,8 @@ module.exports = {
         590: "590px",
       },
       backgroundImage: {
-        "hero-pattern": "url('./public/Admin-Banner.jpg')",
-        // "url('https://avatars.mds.yandex.net/i?id=649ab9c74caac8a6170b6b03dc67a9a275497233-9181172-images-thumbs&ref=rim&n=33&w=480&h=240')",
+        "hero-pattern":
+          "url('https://storage.pruffme.com/user/8df9d243db761e561ceab62eb792fe06/photos/6a550bb9e262aa0870c1bc775588bc18.jpg')",
       },
     },
   },
