@@ -39,7 +39,7 @@ module.exports = {
         590: "590px",
       },
       backgroundImage: {
-        "hero-pattern": "url('./src/data/Admin-Banner.jpg')",
+        "hero-pattern": "url('./public/Admin-Banner.jpg')",
         // "url('https://avatars.mds.yandex.net/i?id=649ab9c74caac8a6170b6b03dc67a9a275497233-9181172-images-thumbs&ref=rim&n=33&w=480&h=240')",
       },
     },
