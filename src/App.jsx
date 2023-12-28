@@ -25,8 +25,17 @@ import {
 import AppRoot from "./layout/AppRoot";
 
 import "./App.css";
+import { useStateContext } from "./contexts/ContextProvider";
 
 function App() {
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
+
   const router = createBrowserRouter([
     {
       path: "/",
