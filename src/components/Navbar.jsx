@@ -79,7 +79,7 @@ function Navbar() {
         <NavButton
           title="Notifications"
           dotColor="#03c9d7"
-          custemFunc={() => handelClick("notificaton")}
+          custemFunc={() => handelClick("notification")}
           color={currentColor}
           icon={<RiNotification3Line />}
         />
