@@ -10,11 +10,11 @@ import avatar from "../data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from "./PathIndex";
 import { useStateContext } from "../contexts/ContextProvider";
 
-const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
+const NavButton = ({ title, custemFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
       type="button"
-      onClick={() => customFunc()}
+      onClick={() => custemFunc()}
       style={{ color }}
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
@@ -40,11 +40,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
-
     window.addEventListener("resize", handleResize);
-
     handleResize();
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -62,28 +59,28 @@ const Navbar = () => {
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
       <NavButton
         title="Menu"
-        customFunc={handleActiveMenu}
+        custemFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
         <NavButton
           title="Cart"
-          customFunc={() => handelClick("cart")}
+          custemFunc={() => handelClick("cart")}
           color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
-          customFunc={() => handelClick("chat")}
+          custemFunc={() => handelClick("chat")}
           color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notification"
           dotColor="rgb(254, 201, 15)"
-          customFunc={() => handelClick("notification")}
+          custemFunc={() => handelClick("notification")}
           color={currentColor}
           icon={<RiNotification3Line />}
         />
