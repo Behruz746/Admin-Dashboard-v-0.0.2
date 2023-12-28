@@ -30,7 +30,7 @@ export const ContextProvider = ({ children }) => {
   const handelClick = (clicked) =>
     setIsClicked({ ...initialState, [clicked]: true });
 
-  return (
+  return ( 
     <StateContext.Provider
       value={{
         activeMenu,
