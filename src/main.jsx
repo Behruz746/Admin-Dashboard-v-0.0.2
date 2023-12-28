@@ -4,7 +4,7 @@ import App from "./App";
 import "./index.css";
 import "normalize.css";
 import { registerLicense } from "@syncfusion/ej2-base";
-import { ContextProvider } from "./contexts/ContextProvider";
+import { ContextProvider } from "./contexts/contextProvider";
 import { Suspense, lazy } from "react";
 const Loading = lazy(() => (
   <div>

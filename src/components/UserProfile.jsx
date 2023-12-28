@@ -3,7 +3,7 @@ import { MdOutlineCancel } from "react-icons/md";
 
 import { Button } from "./PathIndex";
 import { userProfileData } from "../data/dummy";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "../contexts/contextProvider";
 import avatar from "../data/avatar.jpg";
 
 const UserProfile = () => {

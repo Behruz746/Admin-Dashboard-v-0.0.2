@@ -8,7 +8,7 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import avatar from "../data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from "./PathIndex";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "../contexts/contextProvider";
 
 const NavButton = ({ title, custemFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
