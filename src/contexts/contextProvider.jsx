@@ -6,20 +6,20 @@ const initialState = {
   chat: false,
   cart: false,
   userProfile: false,
-  notificaton: false,
+  notification: false,
 };
 
 export const ContextProvider = ({ children }) => {
+  const [screenSize, setScreenSize] = useState(undefined);
+  const [currentColor, setCurrentColor] = useState("#03C9D7");
+  const [currentMode, setCurrentMode] = useState("Light");
+  const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
-  const [screenSize, setScreenSize] = useState(undefined);
-  const [themeSettings, setThemeSettings] = useState(false);
-  const [currentMode, setCurrentMode] = useState("Light");
-  const [currentColor, setCurrentColor] = useState("#1A97F5");
 
-  const setMode = (event) => {
-    setCurrentMode(event.target.value);
-    localStorage.setItem("themeMode", event.target.value);
+  const setMode = (e) => {
+    setCurrentMode(e.target.value);
+    localStorage.setItem("themeMode", e.target.value);
   };
 
   const setColor = (color) => {
@@ -30,24 +30,25 @@ export const ContextProvider = ({ children }) => {
   const handelClick = (clicked) =>
     setIsClicked({ ...initialState, [clicked]: true });
 
-  return ( 
+  return (
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <StateContext.Provider
       value={{
+        currentColor,
+        currentMode,
         activeMenu,
-        setActiveMenu,
-        isClicked,
-        setIsClicked,
-        handelClick,
         screenSize,
         setScreenSize,
-        currentMode,
-        setCurrentMode,
-        currentColor,
-        setCurrentColor,
-        setColor,
-        setMode,
-        themeSettings,
+        handelClick,
+        isClicked,
         initialState,
+        setIsClicked,
+        setActiveMenu,
+        setCurrentColor,
+        setCurrentMode,
+        setMode,
+        setColor,
+        themeSettings,
         setThemeSettings,
       }}
     >
