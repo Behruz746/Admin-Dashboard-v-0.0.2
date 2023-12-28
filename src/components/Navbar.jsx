@@ -106,7 +106,7 @@ function Navbar() {
 
         {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
-        {isClicked.notificaton && <Notification />}
+        {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
