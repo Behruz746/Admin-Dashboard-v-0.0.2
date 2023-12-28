@@ -1,6 +1,18 @@
 import React from "react";
 
-function Button({ bgColor, color, size, text, borderRadius }) {
+import { useStateContext } from "../contexts/ContextProvider";
+
+function Button({
+  icon,
+  bgColor,
+  color,
+  bgHoverColor,
+  size,
+  text,
+  borderRadius,
+  width,
+}) {
+  const { setIsClicked, initialState } = useStateContext();
   return (
     <button
       type="button"
@@ -9,9 +21,10 @@ function Button({ bgColor, color, size, text, borderRadius }) {
         color: color,
         borderRadius: borderRadius,
       }}
-      className={`text-${size} p-3 hover:drop-shadow-xl`}
+      className={` text-${size} p-3 w-${width} hover:drop-shadow-xl hover:bg-${bgHoverColor}`}
+      onClick={() => setIsClicked(initialState)}
     >
-      {text}
+      {icon} {text}
     </button>
   );
 }

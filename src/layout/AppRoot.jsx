@@ -11,7 +11,7 @@ import {
   ThemeSettings,
 } from "../components/PathIndex";
 
-import { useStateContext } from "../contexts/contextProvider";
+import { useStateContext } from "../contexts/ContextProvider";
 
 function AppRoot() {
   const {
