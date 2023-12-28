@@ -66,6 +66,8 @@ function AppRoot() {
         <>
           <Outlet />
         </>
+
+        <Footer />
       </div>
     </div>
   );

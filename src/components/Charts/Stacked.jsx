@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateContext } from "../../contexts/contextProvider";
+import { useStateContext } from "../../contexts/ContextProvider";
 import {
   ChartComponent,
   SeriesCollectionDirective,

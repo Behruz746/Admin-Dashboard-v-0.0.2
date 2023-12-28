@@ -3,7 +3,7 @@ import { MdOutlineCancel } from "react-icons/md";
 
 import { Button } from "./PathIndex";
 import { chatData } from "../data/dummy";
-import { useStateContext } from "../contexts/contextProvider";
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Chat = () => {
   const { currentColor } = useStateContext();

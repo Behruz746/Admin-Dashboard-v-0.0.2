@@ -10,7 +10,7 @@ import {
   AccumulationTooltip,
 } from "@syncfusion/ej2-react-charts";
 
-import { useStateContext } from "../../contexts/contextProvider";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 function Pie({ id, data, legendVisiblity, height }) {
   const { currentMode } = useStateContext();
