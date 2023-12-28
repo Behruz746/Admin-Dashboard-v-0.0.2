@@ -5,7 +5,7 @@ import { Header } from "../components/PathIndex";
 const change = (args) => {
   document.getElementById("preview").style.backgroundColor =
     args.currentValue.hex;
-};
+}; 
 
 function ColorPicker() {
   return (

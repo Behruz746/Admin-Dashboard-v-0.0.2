@@ -4,7 +4,7 @@ import App from "./App";
 import "./index.css";
 import "normalize.css";
 import { registerLicense } from "@syncfusion/ej2-base";
-import { ContextProvider } from "./contexts/contextProvider";
+import { ContextProvider } from "./contexts/ContextProvider";
 
 registerLicense(
   "Ngo9BigBOggjHTQxAR8/V1NAaF5cWWJCf0x0R3xbf1x0ZFZMY1pbRnFPMyBoS35RdURhW3xedHVUR2hcUUd0"
