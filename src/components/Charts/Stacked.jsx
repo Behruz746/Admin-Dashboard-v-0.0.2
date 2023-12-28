@@ -1,5 +1,4 @@
 import React from "react";
-import { useStateContext } from "../../contexts/ContextProvider";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -16,6 +15,7 @@ import {
   stackedPrimaryXAxis,
   stackedPrimaryYAxis,
 } from "../../data/dummy";
+import { useStateContext } from "../../contexts/ContextProvider";
 
 function Stacked({ width, height }) {
   const { currentMode } = useStateContext();

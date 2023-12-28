@@ -24,7 +24,6 @@ function Calendar() {
       <ScheduleComponent
         eventSettings={{ dataSource: scheduleData }}
         selectedDate={new Date(2021, 0, 10)}
-        // currentView="Month"
         height="650px"
       >
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />

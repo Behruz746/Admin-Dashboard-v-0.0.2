@@ -11,8 +11,7 @@ import {
   ThemeSettings,
 } from "../components/PathIndex";
 
-// import { useStateContext } from "../contexts/ContextProvider";
-import { StateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "../contexts/ContextProvider";
 
 function AppRoot() {
   const {
@@ -21,7 +20,7 @@ function AppRoot() {
     setThemeSettings,
     currentColor,
     currentMode,
-  } = useContext(StateContext);
+  } = useStateContext();
 
   return (
     <div
@@ -67,7 +66,6 @@ function AppRoot() {
         <>
           <Outlet />
         </>
-        <Footer />
       </div>
     </div>
   );
